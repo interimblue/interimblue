@@ -1,0 +1,445 @@
+@charset "UTF-8";
+:root {
+  --banner-width: 300px;
+  --banner-height: 250px;
+  --frame-padding: 10px;
+  --frame-padding-x: var(--frame-padding);
+  --frame-padding-y: var(--frame-padding);
+  --content-padding: 0px;
+  --content-padding-x: var(--content-padding);
+  --content-padding-y: var(--content-padding);
+  --content-width: max-content;
+  --content-height: max-content;
+  --layout-spacer: 1rem;
+  --logo-width: 104px;
+  --product-width: 150px;
+  --product-logo-width: 64px;
+  --brand-color-primary: #00D639;
+  --brand-color-secondary: #000;
+  --banner-text-color: #fff;
+  --banner-bg-gradient-direction: to bottom;
+  --banner-bg-color: #000;
+  --font-fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-regular: "Sage Text Bold", var(--font-fallback);
+  --font-bold: "Sage Headline Black", var(--font-fallback);
+  --sprite-sheet-width: var(--banner-width);
+  --sprite-sheet-height: var(--banner-height);
+  --sprite-sheet-frames-total: 24;
+  --sprite-sheet-frames: calc(var(--sprite-sheet-frames-total) - 1);
+  --sprite-sheet-fps: 12;
+  --svg-animated-width: var(--banner-width);
+  --svg-animated-height: var(--banner-height);
+  --svg-animated-position-left: 0px;
+  --svg-animated-position-bottom: 0px;
+  --svg-animated-icon-width: var(--banner-width);
+  --svg-animated-icon-height: var(--banner-height);
+  --svg-animated-line-width: var(--banner-width);
+  --svg-animated-line-height: var(--banner-height);
+}
+
+@font-face {
+  font-family: "Sage Text Bold";
+  src: url("../fonts/Sage_Text-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Sage Headline Black";
+  src: url("../fonts/Sage_Headline-Black.woff2") format("woff2");
+}
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  with updates by Nigel
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+img, picture, video, canvas, svg, iframe {
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.banner {
+  font-family: var(--font-regular);
+  line-height: 1.1;
+  color: var(--banner-text-color);
+  background-color: var(--banner-bg-color);
+  background-image: linear-gradient(var(--banner-bg-gradient-direction), var(--banner-bg-gradient));
+}
+
+h1, .h1, .font-size-1 {
+  font-size: 2.4rem;
+}
+
+h2, .h2, .font-size-2 {
+  font-size: 1.8rem;
+}
+
+h3, .h3, .font-size-3 {
+  font-size: 1.4rem;
+}
+
+h4, .h4, .font-size-4 {
+  font-size: 1.2rem;
+}
+
+h5, .h5, .font-size-5 {
+  font-size: 1rem;
+}
+
+h6, .h6, .font-size-6 {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.1;
+  font-family: var(--font-bold);
+}
+
+h1, .h1, .font-size-1 {
+  font-family: var(--font-bold);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold, strong {
+  font-family: var(--font-bold);
+}
+
+.text-large {
+  font-size: 125%;
+}
+
+.text-small {
+  font-size: 75%;
+}
+
+.text-color-primary {
+  color: var(--brand-color-primary);
+}
+
+.text-color-secondary {
+  color: var(--brand-color-secondary);
+}
+
+.text-color-accent {
+  color: var(--brand-color-accent);
+}
+
+.banner, .click-tag {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.click-tag {
+  z-index: 99999;
+}
+.is-dev .click-tag {
+  display: none;
+}
+
+.banner,
+.click-tag,
+.frame,
+.frame-content,
+.frame-element {
+  position: absolute;
+}
+
+.banner,
+.click-tag,
+.frame {
+  top: 0;
+  left: 0;
+  width: var(--banner-width);
+  height: var(--banner-height);
+}
+
+.frame {
+  padding: var(--frame-padding-y) var(--frame-padding-x);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.frame-content {
+  padding: var(--content-padding-y) var(--content-padding-x);
+  width: var(--content-width);
+  height: var(--content-height);
+  max-width: calc(100% - var(--frame-padding-x) * 2);
+  max-height: calc(100% - var(--frame-padding-y) * 2);
+}
+
+.frame-element {
+  z-index: 1;
+  margin: 0;
+}
+
+.layout-flow > * + *:not(:empty) {
+  margin-top: calc(var(--layout-spacer));
+}
+
+.layout-flow--sm > * + *:not(:empty) {
+  margin-top: calc(var(--layout-spacer) * 0.5);
+}
+
+.layout-flow--lg > * + *:not(:empty) {
+  margin-top: calc(var(--layout-spacer) * 2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  line-height: 1;
+  text-align: center;
+  font-family: var(--font-regular);
+  font-size: 1.6rem;
+  font-size: 16px;
+  color: #000;
+  background: var(--brand-color-primary);
+  border: 0px solid var(--brand-color-primary);
+  border-radius: 2em;
+}
+.btn:not(.is-invisible) {
+  transition: all 0.25s;
+}
+body:hover .btn:not(.is-invisible) {
+  background: var(--brand-color-primary);
+  color: #000;
+  opacity: 0.8;
+}
+
+.sprite-sheet {
+  width: var(--sprite-sheet-width);
+  height: var(--sprite-sheet-height);
+  animation-name: sprite-sheet-animation;
+  animation-duration: calc(var(--sprite-sheet-frames-total) / var(--sprite-sheet-fps) * 1s);
+  animation-timing-function: steps(var(--sprite-sheet-frames));
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  background-size: cover;
+}
+
+@keyframes sprite-sheet-animation {
+  100% {
+    background-position-x: calc(var(--sprite-sheet-frames) * 100% / var(--sprite-sheet-frames));
+  }
+}
+.sprite-sheet-1 {
+  --sprite-sheet-width: 250px;
+  --sprite-sheet-height: 374px;
+  --sprite-sheet-frames-total: 96;
+  --sprite-sheet-frames: calc(var(--sprite-sheet-frames-total) - 1);
+  --sprite-sheet-fps: 24;
+  --sprite-sheet-frames-time: calc(((var(--sprite-sheet-frames-total) / var(--sprite-sheet-fps))) / var(--sprite-sheet-frames-total));
+}
+
+.sprite-sheet--vertical {
+  aspect-ratio: 250/374;
+}
+
+.sprite-sheet--horizontal {
+  --sprite-sheet-width: 250px;
+  --sprite-sheet-height: 158px;
+  aspect-ratio: 250/158;
+}
+
+.svg-animated {
+  width: var(--svg-animated-width);
+  height: var(--svg-animated-height);
+  left: var(--svg-animated-position-left);
+  bottom: var(--svg-animated-position-bottom);
+  z-index: 0;
+}
+.svg-animated svg {
+  width: inherit;
+  height: inherit;
+}
+
+.svg-animated--icon {
+  --gradient-width-left: 2em;
+  --gradient-width-right: 2em;
+  --gradient-offset-left: 0px;
+  --gradient-offset-right: 0px;
+  width: var(--svg-animated-icon-width);
+  height: var(--svg-animated-icon-height);
+}
+.svg-animated--icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #000 calc(var(--gradient-offset-left)), transparent calc(var(--gradient-offset-left) + var(--gradient-width-left))), linear-gradient(to left, #000 calc(var(--gradient-offset-right)), transparent calc(var(--gradient-offset-right) + var(--gradient-width-right)));
+}
+
+.svg-animated--line {
+  width: var(--svg-animated-line-width);
+  height: var(--svg-animated-line-height);
+}
+
+.is-active, .is-visible {
+  opacity: 1;
+}
+
+.is-inactive {
+  display: none;
+}
+
+.is-invisible {
+  opacity: 0;
+}
+
+.align--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.align--center-vert {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.align--center-horz {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.is-playing, .is-playing * {
+  animation-play-state: running !important;
+}
+
+.is-paused, .is-paused * {
+  animation-play-state: paused !important;
+}
+
+.is-looped, .is-looped * {
+  animation-iteration-count: infinite !important;
+}
+
+.logo {
+  width: var(--logo-width);
+}
+
+.terms {
+  z-index: 20;
+  font-size: 9px;
+}
+
+.quote--left::before, .quote--center::before {
+  content: "“";
+}
+.quote--left::after, .quote--center::after {
+  content: "”";
+}
+
+.quote--left {
+  position: relative;
+  padding-left: 0.7em;
+  left: -0.7em;
+}
+.quote--left::before {
+  position: absolute;
+  left: 0;
+}
+.quote--left::after {
+  position: relative;
+  left: 0.1em;
+}
+
+.quote--center::before, .quote--center::after {
+  display: block;
+}
+.quote--center::before {
+  line-height: 0.1;
+}
+.frame-content {
+  z-index: 100;
+}
+
+.frame:not(.frame-1) .font-size-1 {
+  font-family: var(--font-regular);
+}
+
+.sprite-sheet-outer {
+  top: 0;
+  left: 0;
+  width: var(--banner-width);
+  height: var(--banner-height);
+}
+
+.sprite-sheet-bg {
+  bottom: 0;
+  left: 0;
+  min-width: var(--banner-width);
+  z-index: 0;
+}
+
+.sprite-sheet {
+  top: 0;
+  left: 0;
+  --sprite-sheet-width: var(--banner-width);
+  --sprite-sheet-height: var(--banner-height);
+  --sprite-sheet-fps: 12;
+}
+
+.sprite-sheet-1 {
+  --sprite-sheet-frames-total: 18;
+  --sprite-sheet-frames: calc(var(--sprite-sheet-frames-total) - 1);
+  --sprite-sheet-frames-time: calc(((var(--sprite-sheet-frames-total) / var(--sprite-sheet-fps))) / var(--sprite-sheet-frames-total));
+}
+
+.sprite-sheet-2 {
+  --sprite-sheet-frames-total: 30;
+  --sprite-sheet-frames: calc(var(--sprite-sheet-frames-total) - 1);
+  --sprite-sheet-frames-time: calc(((var(--sprite-sheet-frames-total) / var(--sprite-sheet-fps))) / var(--sprite-sheet-frames-total));
+}
+
+:root {
+  --banner-width: 300px;
+  --banner-height: 250px;
+  --frame-padding-x: 24px;
+  --frame-padding-y: 16px;
+  --logo-width: 96px;
+}
+
+.btn, .layout-flow .btn {
+  font-size: 12px;
+  margin-top: 2.5rem;
+}
+
+.logo {
+  bottom: var(--frame-padding-y);
+  right: var(--frame-padding-x);
+}

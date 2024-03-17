@@ -1,0 +1,18 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+:root {
+    --link-color: #d1330f;
+    --link-hover-color: #d1330f;
+    --link-underline-shadow: 0 1px 0 #d1330f;
+    --link-hover-underline-color: #d1330f;
+    --link-hover-underline-shadow: 0 2px 0 #d1330f;
+    box-shadow: 0 2px 0 #d1330f;
+    --darkpurple: #f40000;
+    --midpurple: #ff5a5a;
+    --lightpurple: #ffbbbb;
+
+  }
