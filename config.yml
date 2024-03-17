@@ -12,7 +12,7 @@ taxonomies:
 menu:
     main:
         - name: About
-          url: /about/
+          url: about/
           weight: 1
         - name: Speaking & Publications
           url: speakingandpublications/
@@ -46,23 +46,23 @@ params:
           enabled: true
           title: Andrew Ellul
           subtitle: "A data scientist / software engineer turned AI architect with 8+ years experience. I am passionate about Natural Language Processing, ML Ops and AI Safety and evaluation. Currently A Startup Solutions Architect at AWS. Helping UK's AWS AI startups scale their architecture and become unicorns."
-          imageUrl: "/picture.jpeg"
+          imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
           imageTitle: Andrew Ellul
           buttons:
             - name: About
-              url: /about/
+              url: about/
             - name: Speaking & Publications
               url: speakingandpublications/
             - name: Tags
-              url: /tags/
+              url: tags/
             - name: Archive
-              url: /archive/
+              url: archive/
 
     socialIcons:
         - name: CV
-          url: /cv.pdf
+          url: cv.pdf
         - name: Email
           url: mailto:andrew.t.ellul@gmail.com
         - name: GitHub
@@ -76,7 +76,7 @@ params:
         hiddenInSingle: true
     label:
       text: "Andrew Ellul"
-      icon: /favicon.ico
+      icon: favicon.ico
       iconHeight: 18
 
 markup:
