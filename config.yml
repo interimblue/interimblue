@@ -1,0 +1,91 @@
+baseURL: "https://interimblue.github.io/" 
+title: Andrew Ellul
+paginate: 20
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: About
+          url: /about/
+          weight: 1
+        - name: Speaking & Publications
+          url: /speakingandpublications/
+          weight: 2
+
+params:
+    description: "A data scientist / software engineer turned AI architect with 8+ years experience. I am passionate about Natural Language Processing, ML Ops and AI Safety and evaluation. Currently A Startup Solutions Architect at AWS. Helping UK's AWS AI startups scale their architecture and become unicorns."
+    author: Andrew Ellul
+    googleAnalyticsID: "XXXXXX"
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: true
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: false
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: Andrew Ellul
+          subtitle: "A data scientist / software engineer turned AI architect with 8+ years experience. I am passionate about Natural Language Processing, ML Ops and AI Safety and evaluation. Currently A Startup Solutions Architect at AWS. Helping UK's AWS AI startups scale their architecture and become unicorns."
+          imageUrl: "/picture.jpeg"
+          imageWidth: 160
+          imageHeight: 160
+          imageTitle: Andrew Ellul
+          buttons:
+            - name: About
+              url: /about/
+            - name: Speaking & Publications
+              url: /speakingandpublications/
+            - name: Tags
+              url: /tags/
+            - name: Archive
+              url: /archive/
+
+    socialIcons:
+        - name: CV
+          url: /cv.pdf
+        - name: Email
+          url: mailto:andrew.t.ellul@gmail.com
+        - name: GitHub
+          url: https://github.com/interimblue
+
+    assets:
+        disableHLJS: true
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Andrew Ellul"
+      icon: /favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2
