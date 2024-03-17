@@ -15,7 +15,7 @@ menu:
           url: /about/
           weight: 1
         - name: Speaking & Publications
-          url: /speakingandpublications/
+          url: speakingandpublications/
           weight: 2
 
 params:
@@ -24,6 +24,7 @@ params:
     googleAnalyticsID: "XXXXXX"
     DateFormat: "January 2006"
     defaultTheme: light
+    relativeURLs: true
     hideFooter: true
     disableThemeToggle: true
     ShowShareButtons: false
@@ -53,7 +54,7 @@ params:
             - name: About
               url: /about/
             - name: Speaking & Publications
-              url: /speakingandpublications/
+              url: speakingandpublications/
             - name: Tags
               url: /tags/
             - name: Archive
