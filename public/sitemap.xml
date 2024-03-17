@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://interimblue.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://interimblue.github.io/tags/ai/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://interimblue.github.io/</loc>
   </url><url>
-    <loc>http://localhost:1313/archive/</loc>
+    <loc>https://interimblue.github.io/archive/</loc>
   </url><url>
-    <loc>http://localhost:1313/essays/</loc>
+    <loc>https://interimblue.github.io/essays/</loc>
   </url><url>
-    <loc>http://localhost:1313/speakingandpublications/</loc>
+    <loc>https://interimblue.github.io/speakingandpublications/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://interimblue.github.io/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/1/</loc>
+    <loc>https://interimblue.github.io/1/</loc>
   </url>
 </urlset>
