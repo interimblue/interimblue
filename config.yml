@@ -45,7 +45,9 @@ params:
     profileMode:
           enabled: true
           title: Andrew Ellul
-          subtitle: "A data scientist / software engineer turned AI architect with 8+ years experience. I am passionate about Natural Language Processing, ML Ops and AI Safety and evaluation. Currently A Startup Solutions Architect at AWS. Helping UK's AWS AI startups scale their architecture and become unicorns."
+          subtitle: "A seasoned AI architect, currently an AI Startup Solutions Architect at AWS, committed to helping UK's AWS AI startups scale their models, cloud architecture and become unicorns. <br> <br>
+
+My expertise lies in Natural Language Processing, ML Ops, and Computational Social Science. With a more recent focus on AI safety and evaluation. <br> <br>"
           imageUrl: "picture.jpeg"
           imageWidth: 160
           imageHeight: 160
@@ -64,7 +66,7 @@ params:
         - name: CV
           url: cv.pdf
         - name: Email
-          url: mailto:andrew.t.ellul@gmail.com
+          url: mailto:andrew.t.ellul+public@gmail.com
         - name: GitHub
           url: https://github.com/interimblue
 
